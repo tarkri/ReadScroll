@@ -12,7 +12,7 @@ $(document).ready(function(){
 	});
 	console.log(blkstr.join(", "));
 
-	console.log($('.entry-content .sqs-block-html').height());
+	console.log($('.entry-content .sqs-block-html:eq(2)').html());
 
 
 });
