@@ -11,4 +11,7 @@ $(document).ready(function(){
 	  blkstr.push(str);
 	});
 	console.log(blkstr.join(", "));
+
+	console.log($('.entry-content .sqs-block-html:eq(2)').height);
+
 });
