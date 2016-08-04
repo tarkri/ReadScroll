@@ -5,5 +5,10 @@ $(document).ready(function(){
 		script_name: 'ReadScroll',
 		created: "August 4, 2016"
 	};
-	console.log(creditArray);
+	var blkstr = [];
+	$.each(creditArray, function(idx2,val2) {                    
+	  var str = idx2 + ":" + val2;
+	  blkstr.push(str);
+	});
+	console.log(blkstr.join(", "));
 });
