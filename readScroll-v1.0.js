@@ -12,7 +12,6 @@ $(document).ready(function(){
 	});
 	console.log(blkstr.join(", "));
 
-	console.log($('.entry-content .sqs-block-html:eq(2)').html());
-
+	console.log($('.entry-content').find('.sqs-block-html:nth-child(2)').height());
 
 });
