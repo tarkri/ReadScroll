@@ -5,5 +5,5 @@ $(document).ready(function(){
 		script_name: 'ReadScroll',
 		created: "August 4, 2016"
 	};
-	console.log()
+	console.log(creditArray);
 });
