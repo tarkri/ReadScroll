@@ -12,6 +12,13 @@ $(document).ready(function(){
 	});
 	console.log(blkstr.join(", "));
 
-	console.log($('.entry-content').find('.sqs-block-html:nth-child(2)').height());
+	var contentBlocks = $('.entry-content').find('.sqs-block-html');
+	var counter = 0;
+	contentBlocks.each(function(){
+	  counter++;
+	  if(counter == 2) {
+	    console.log($(this).height());
+	  }
+	});
 
 });
