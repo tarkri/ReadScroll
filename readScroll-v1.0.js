@@ -37,7 +37,10 @@ $(document).ready(function(){
 		 			//console.log('100%');
 		 			$('.progress').css('width', '100%');
 		 		}
+		     } else {
+		     	$('.progress').css('width', '0%');
 		     }
+
 		 });
 	  }
 	});
