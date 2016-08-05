@@ -31,7 +31,7 @@ $(document).ready(function(){
 			 		if(currentStep == 0) {
 			 			console.log('top!');
 			 		}
-			 		if(currentStep >= contentHeight) {
+			 		if($window.scrollTop() >= contentHeight) {
 			 			console.log('bottom!');
 			 		}
 		     }
