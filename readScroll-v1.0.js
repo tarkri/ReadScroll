@@ -24,14 +24,18 @@ $(document).ready(function(){
 	  	contentHeight = $(this).height();
 	  	mainContentBlock = $(this);
 	  	distance = mainContentBlock.offset().top;
+
+	  	$window.scroll(function() {
+			//console.log('scrolling');
+		    if ( $window.scrollTop() >= distance ) {
+		        //console.log('start counting!');
+		        
+		    }
+		});
+	  	
 	  }
 	});
 
-	$window.scroll(function() {
-		console.log('scrolling');
-	    if ( $window.scrollTop() >= distance ) {
-	        console.log('start counting!');
-	    }
-	});
+
 
 });
