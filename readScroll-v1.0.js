@@ -26,6 +26,7 @@ $(document).ready(function(){
 	  	distance = mainContentBlock.offset().top;
 	  	var blockcounter = 0;
 		 if ( $window.scrollTop() >= distance ) {
+		 		console.log('detecting!');
 		 		console.log($window.scrollTop() - distance);
 	     }	
 	  }
