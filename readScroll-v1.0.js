@@ -25,36 +25,9 @@ $(document).ready(function(){
 	  	mainContentBlock = $(this);
 	  	distance = mainContentBlock.offset().top;
 	  	var blockcounter = 0;
-	  	//Firefox
-		 $window.bind('DOMMouseScroll', function(e){
-		     if(e.originalEvent.detail > 0) {
-		         //scroll down
-		         console.log('Down');
-		     }else {
-		         //scroll up
-		         console.log('Up');
-		     }
-
-		     //prevent page fom scrolling
-		     return false;
-		 });
-
-		 //IE, Opera, Safari
-		 $window.bind('mousewheel', function(e){
-		     if(e.originalEvent.wheelDelta < 0) {
-		         //scroll down
-		         console.log('Down');
-		     }else {
-		         //scroll up
-		         console.log('Up');
-		     }
-
-		     //prevent page fom scrolling
-		     return false;
-		 });
-		 // if ( $window.scrollTop() >= distance ) {
-		 // 		console.log()
-		 //    }
+		 if ( $window.scrollTop() >= distance ) {
+		 		console.log()
+	     }	
 	  }
 	});
 });
