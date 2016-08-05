@@ -26,8 +26,14 @@ $(document).ready(function(){
 	  	distance = mainContentBlock.offset().top;
 	  	$window.scroll(function(){
 	  		if ( $window.scrollTop() >= distance ) {
-			 		console.log('detecting!');
-			 		console.log($window.scrollTop() - distance);
+			 		//console.log('detecting!');
+			 		var currentStep = $window.scrollTop() - distance;
+			 		if(currentStep == 0) {
+			 			console.log('top!');
+			 		}
+			 		if(currentStep == contentHeight) {
+			 			console.log('bottom!');
+			 		}
 		     }
 		 });
 	  }
