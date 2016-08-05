@@ -28,9 +28,10 @@ $(document).ready(function(){
 	});
 
 	$window.scroll(function() {
-    if ( $window.scrollTop() >= distance ) {
-        console.log('start counting!');
-    }
-});
+		console.log('scrolling');
+	    if ( $window.scrollTop() >= distance ) {
+	        console.log('start counting!');
+	    }
+	});
 
 });
