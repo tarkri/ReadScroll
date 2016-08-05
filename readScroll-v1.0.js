@@ -29,10 +29,10 @@ $(document).ready(function(){
 			//console.log('scrolling');
 		    if ( $window.scrollTop() >= distance ) {
 		        //console.log('start counting!');
-		        
+		        console.log(distance - contentHeight);
 		    }
 		});
-	  	
+
 	  }
 	});
 
