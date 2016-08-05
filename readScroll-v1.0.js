@@ -25,20 +25,20 @@ $(document).ready(function(){
 	  	mainContentBlock = $(this);
 	  	distance = mainContentBlock.offset().top;
 	  	$window.scroll(function(){
-	  		if ( $window.scrollTop() >= distance ) {
-			 		//console.log('detecting!');
-			 		var currentStep = $window.scrollTop() - distance;
-			 		if(currentStep == 0) {
-			 			console.log('top!');
-			 		}
-			 		if($window.scrollTop() >= contentHeight) {
-			 			console.log('bottom!');
-			 		}
+	  		if ($window.scrollTop() >= distance ) {
+		 		var currentStep = $window.scrollTop() - distance;
+		 		if(currentStep >= 0) {
+		 			if($window.scrollTop() <= contentHeight) {
+		 				//console.log(currentStep);
+		 				$('.progress').css('width', ((currentStep/contentHeight)*100)+'%');
+		 			}
+		 		}
+		 		if($window.scrollTop() >= contentHeight) {
+		 			//console.log('100%');
+		 			$('.progress').css('width', '100%');
+		 		}
 		     }
 		 });
 	  }
 	});
-
-
-
 });
