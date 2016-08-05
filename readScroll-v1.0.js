@@ -24,11 +24,15 @@ $(document).ready(function(){
 	  	contentHeight = $(this).height();
 	  	mainContentBlock = $(this);
 	  	distance = mainContentBlock.offset().top;
-	  	var blockcounter = 0;
-		 if ( $window.scrollTop() >= distance ) {
-		 		console.log('detecting!');
-		 		console.log($window.scrollTop() - distance);
-	     }	
+	  	$window.scroll(function(){
+	  		if ( $window.scrollTop() >= distance ) {
+			 		console.log('detecting!');
+			 		console.log($window.scrollTop() - distance);
+		     }
+		 });
 	  }
 	});
+
+
+
 });
