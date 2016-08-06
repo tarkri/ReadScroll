@@ -31,14 +31,26 @@ $(document).ready(function(){
 		 			if($window.scrollTop() <= contentHeight) {
 		 				//console.log(currentStep);
 		 				$('.progress').css('width', ((currentStep/contentHeight)*100)+'%');
+		 				$('.progress-wrapper').css({
+		 					height: '5px',
+		 					width: '100%'	
+		 				});
 		 			}
 		 		}
 		 		if($window.scrollTop() >= contentHeight) {
 		 			//console.log('100%');
 		 			$('.progress').css('width', '100%');
+		 			$('.progress-wrapper').css({
+		 					height: '5px',
+		 					width: '100%'	
+		 				});
 		 		}
 		     } else {
 		     	$('.progress').css('width', '0%');
+		     	$('.progress-wrapper').css({
+		 					height: '0px',
+		 					width: '100%'	
+		 				});
 		     }
 
 		 });
