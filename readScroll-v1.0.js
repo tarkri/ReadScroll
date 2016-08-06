@@ -54,6 +54,35 @@ $(document).ready(function(){
 		     }
 
 		 });
+	  	setInterval(function(){
+	  		if ($window.scrollTop() >= distance ) {
+		 		var currentStep = $window.scrollTop() - distance;
+		 		if(currentStep >= 0) {
+		 			if($window.scrollTop() <= contentHeight) {
+		 				//console.log(currentStep);
+		 				$('.progress').css('width', ((currentStep/contentHeight)*100)+'%');
+		 				$('.progress-wrapper').css({
+		 					height: '6px',
+		 					width: '100%'	
+		 				});
+		 			}
+		 		}
+		 		if($window.scrollTop() >= contentHeight) {
+		 			//console.log('100%');
+		 			$('.progress').css('width', '100%');
+		 			$('.progress-wrapper').css({
+		 					height: '6px',
+		 					width: '100%'	
+		 				});
+		 		}
+		     } else {
+		     	$('.progress').css('width', '0%');
+		     	$('.progress-wrapper').css({
+		 					height: '0px',
+		 					width: '100%'	
+		 				});
+		     }
+	  	}, 500);
 	  }
 	});
 });
