@@ -32,7 +32,7 @@ $(document).ready(function(){
 		 				//console.log(currentStep);
 		 				$('.progress').css('width', ((currentStep/contentHeight)*100)+'%');
 		 				$('.progress-wrapper').css({
-		 					height: '5px',
+		 					height: '6px',
 		 					width: '100%'	
 		 				});
 		 			}
@@ -41,7 +41,7 @@ $(document).ready(function(){
 		 			//console.log('100%');
 		 			$('.progress').css('width', '100%');
 		 			$('.progress-wrapper').css({
-		 					height: '5px',
+		 					height: '6px',
 		 					width: '100%'	
 		 				});
 		 		}
