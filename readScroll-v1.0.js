@@ -28,8 +28,9 @@ $(document).ready(function(){
 	  		if ($window.scrollTop() >= distance ) {
 		 		var currentStep = $window.scrollTop() - distance;
 		 		if(currentStep >= 0) {
+		 			console.log(currentStep/contentHeight);
 		 			if($window.scrollTop() <= contentHeight) {
-		 				//console.log(currentStep);
+		 				
 		 				$('.progress').css('width', ((currentStep/contentHeight)*100)+'%');
 		 				$('.progress-wrapper').css({
 		 					height: '6px',
