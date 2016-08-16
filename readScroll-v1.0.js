@@ -24,6 +24,7 @@ $(document).ready(function(){
 	  	contentHeight = $(this).height();
 	  	mainContentBlock = $(this);
 	  	distance = mainContentBlock.offset().top;
+	  	console.log('block height:'+distance);
 	  	$window.scroll(function(){
 	  		if ($window.scrollTop() >= distance ) {
 		 		var currentStep = $window.scrollTop() - distance;
