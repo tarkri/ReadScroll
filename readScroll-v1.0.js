@@ -24,13 +24,14 @@ $(document).ready(function(){
 	  	contentHeight = $(this).height();
 	  	mainContentBlock = $(this);
 	  	distance = mainContentBlock.offset().top;
-	  	console.log('block height:'+distance);
+	  	console.log('block height:'+contentHeight);	
+	  		  	 
 	  	$window.scroll(function(){
 	  		if ($window.scrollTop() >= distance ) {
 		 		var currentStep = $window.scrollTop() - distance;
 		 		if(currentStep >= 0) {
-		 			console.log(currentStep);
-		 			if($window.scrollTop() <= contentHeight) {
+		 			console.log(distance + contentHeight);
+		 			if($window.scrollTop() <= (distance + contentHeight)) {
 		 				
 		 				$('.progress').css('width', ((currentStep/contentHeight)*100)+'%');
 		 				$('.progress-wrapper').css({
@@ -39,14 +40,7 @@ $(document).ready(function(){
 		 				});
 		 			}
 		 		}
-		 		if($window.scrollTop() >= contentHeight) {
-		 			//console.log('100%');
-		 			$('.progress').css('width', '100%');
-		 			$('.progress-wrapper').css({
-		 					height: '6px',
-		 					width: '100%'	
-		 				});
-		 		}
+
 		     } else {
 		     	$('.progress').css('width', '0%');
 		     	$('.progress-wrapper').css({
@@ -60,7 +54,7 @@ $(document).ready(function(){
 	  		if ($window.scrollTop() >= distance ) {
 		 		var currentStep = $window.scrollTop() - distance;
 		 		if(currentStep >= 0) {
-		 			if($window.scrollTop() <= contentHeight) {
+		 			if($window.scrollTop() <= (distance + contentHeight)) {
 		 				//console.log(currentStep);
 		 				$('.progress').css('width', ((currentStep/contentHeight)*100)+'%');
 		 				$('.progress-wrapper').css({
@@ -69,14 +63,7 @@ $(document).ready(function(){
 		 				});
 		 			}
 		 		}
-		 		if($window.scrollTop() >= contentHeight) {
-		 			//console.log('100%');
-		 			$('.progress').css('width', '100%');
-		 			$('.progress-wrapper').css({
-		 					height: '6px',
-		 					width: '100%'	
-		 				});
-		 		}
+
 		     } else {
 		     	$('.progress').css('width', '0%');
 		     	$('.progress-wrapper').css({
@@ -88,3 +75,9 @@ $(document).ready(function(){
 	  }
 	});
 });
+
+$(document).ready(function(){
+    
+   
+});
+
